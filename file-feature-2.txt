@@ -1,0 +1,37 @@
+$ git clone https://github.com/yourname/xi-mac.git
+Cloning into 'xi-mac'...
+remote: Enumerating objects: 43, done.
+remote: Counting objects: 100% (43/43), done.
+remote: Compressing objects: 100% (40/40), done.
+remote: Total 5408 (delta 12), reused 23 (delta 2), pack-reused 5365
+Receiving objects: 100% (5408/5408), 4.47 MiB | 5.29 MiB/s, done.
+Resolving deltas: 100% (3838/3838), done.
+$ cd xi-mac
+$ # редактируем код
+$  git diff
+diff --git a/README.md b/README.md
+index dbedcbe..d6958d4 100644
+--- a/README.md
++++ b/README.md
+@@ -1,3 +1,5 @@
++it's a new change!
++
+ [![Build Status](https://travis-ci.com/xi-editor/xi-mac.svg?branch=master)](https://travis-ci.com/xi-editor/xi-mac)
+ [![codecov](https://codecov.io/gh/xi-editor/xi-mac/branch/master/graph/badge.svg)](https://codecov.io/gh/xi-editor/xi-mac)
+$ git add .
+$ git commit # пишем описание изменений в самой первой строке файла
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch master
+# Your branch is ahead of 'origin/master' by 1 commit.
+#   (use "git push" to publish your local commits)
+#
+# Changes to be committed:
+#   	modified:   README.md
+
+$ # снова изменения
+$ git commit
+$ git pull origin master
+$ git push origin https://github.com/yourname/xi-mac.git
